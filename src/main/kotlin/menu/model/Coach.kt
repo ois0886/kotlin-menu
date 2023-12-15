@@ -1,6 +1,6 @@
-package menu.menu.model
+package menu.model
 
-import menu.menu.util.Messages
+import menu.util.Messages
 
 class Coach private constructor(val name: String) {
 

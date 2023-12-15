@@ -1,7 +1,7 @@
-package menu.menu.model
+package menu.model
 
 import camp.nextstep.edu.missionutils.Randoms
-import menu.model.menu.*
+import menu.model.menus.*
 
 
 class RecommendSystem(

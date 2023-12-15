@@ -1,4 +1,5 @@
-package menu.model.menu
+package menu.model.menus
+
 
 enum class WesternMenus(override val koreanName: String) : Menus {
     LASAGNA("라자냐"),

@@ -1,4 +1,4 @@
-package menu.menu.util
+package menu.util
 
 object Messages {
 

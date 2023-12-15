@@ -1,6 +1,6 @@
-package menu.menu.util
+package menu.util
 
-import menu.model.menu.*
+import menu.model.menus.*
 
 private val allMenus: List<Menus> = JapaneseMenus.values().toList() +
         KoreanMenus.values().toList() +

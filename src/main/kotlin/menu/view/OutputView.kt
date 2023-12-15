@@ -1,11 +1,11 @@
-package menu.menu.view
+package menu.view
 
-import menu.menu.model.Coach
-import menu.menu.model.RecommendCategory
-import menu.menu.model.RecommendResult
-import menu.menu.model.RecommendSystem
-import menu.model.menu.Menus
-import menu.menu.util.Messages
+import menu.model.Coach
+import menu.model.RecommendCategory
+import menu.model.RecommendResult
+import menu.model.RecommendSystem
+import menu.model.menus.Menus
+import menu.util.Messages
 
 class OutputView(
     private val recommendCategories: List<Int> = RecommendCategory().getRecommendCategories()

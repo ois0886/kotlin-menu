@@ -1,10 +1,10 @@
-package menu.menu.view
+package menu.view
 
-import menu.menu.util.Messages
+import menu.util.Messages
 import camp.nextstep.edu.missionutils.Console
-import menu.menu.model.Coach
-import menu.model.menu.Menus
-import menu.menu.util.toMenuCreateOrThrow
+import menu.model.Coach
+import menu.model.menus.Menus
+import menu.util.toMenuCreateOrThrow
 
 class InputView {
 
