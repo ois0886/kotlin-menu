@@ -1,4 +1,4 @@
-package menu.menu.model
+package menu.model
 
 import camp.nextstep.edu.missionutils.Randoms
 

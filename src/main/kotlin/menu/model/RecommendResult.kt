@@ -1,4 +1,4 @@
-package menu.menu.model
+package menu.model
 
 data class RecommendResult(
     val coachName: String,

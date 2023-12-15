@@ -1,4 +1,4 @@
-package menu.model.menu
+package menu.model.menus
 
 enum class AsianMenus(override val koreanName: String) : Menus {
     PAD_THAI("팟타이"),

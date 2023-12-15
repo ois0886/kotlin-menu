@@ -1,9 +1,9 @@
-package menu.menu.controller
+package menu.controller
 
-import menu.menu.model.Coach
-import menu.model.menu.Menus
-import menu.menu.view.InputView
-import menu.menu.view.OutputView
+import menu.model.Coach
+import menu.model.menus.Menus
+import menu.view.InputView
+import menu.view.OutputView
 
 class MenuController(
     private val inputView: InputView = InputView(),
