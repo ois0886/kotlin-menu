@@ -6,23 +6,20 @@ class RecommendCategory {
 
     fun getRecommendCategories(): List<Int> {
         val selectedCategories = mutableListOf<Int>()
-        val checkCategories = IntArray(CATEGORY_COUNT + 1)
         repeat(CATEGORY_COUNT) {
-            val randomNumber = findValidRandomNumber(checkCategories)
+            val randomNumber = findValidRandomNumber(selectedCategories)
             selectedCategories.add(randomNumber)
-            checkCategories[randomNumber]++
         }
         return selectedCategories
     }
 
-    private fun findValidRandomNumber(checkCategories: IntArray): Int {
-        var randomNumber: Int = Randoms.pickNumberInRange(START_CATEGORY_NUMBER, END_CATEGORY_NUMBER)
+    private fun findValidRandomNumber(selectedCategories: MutableList<Int>): Int {
         while (true) {
-            if (checkCategories[randomNumber] > REDUNDANCY_TWO) {
-                randomNumber = Randoms.pickNumberInRange(START_CATEGORY_NUMBER, END_CATEGORY_NUMBER)
-            } else break
+            val randomNumber: Int = Randoms.pickNumberInRange(START_CATEGORY_NUMBER, END_CATEGORY_NUMBER)
+            if (selectedCategories.count { it == randomNumber } <= REDUNDANCY_TWO) {
+                return randomNumber
+            }
         }
-        return randomNumber
     }
 
     companion object {

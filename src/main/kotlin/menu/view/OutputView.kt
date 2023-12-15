@@ -4,7 +4,7 @@ import menu.model.Coach
 import menu.model.RecommendCategory
 import menu.model.RecommendResult
 import menu.model.RecommendSystem
-import menu.model.menus.Menus
+import menu.model.Menus
 import menu.util.Messages
 
 class OutputView(
@@ -16,7 +16,7 @@ class OutputView(
         println(recommendCategories.toCategory())
     }
 
-    fun printRecommendResults(coachAndMenus: List<Pair<Coach, List<Menus>>>) {
+    fun printRecommendResults(coachAndMenus: List<Pair<Coach, List<String>>>) {
         val recommendSystem = RecommendSystem(coachAndMenus = coachAndMenus, recommendCategories = recommendCategories)
         val results = recommendSystem.getRecommendResult()
         results.forEach { result ->

@@ -1,7 +1,7 @@
 package menu.controller
 
 import menu.model.Coach
-import menu.model.menus.Menus
+import menu.model.Menus
 import menu.view.InputView
 import menu.view.OutputView
 
@@ -14,7 +14,7 @@ class MenuController(
         return printInputCoachName()
     }
 
-    private fun inputMenus(coach: Coach): List<Menus> = inputUntilValid {
+    private fun inputMenus(coach: Coach): List<String> = inputUntilValid {
         return printInputImpossibleMenus(coach = coach)
     }
 

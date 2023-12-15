@@ -1,12 +1,10 @@
 package menu.model
 
 import camp.nextstep.edu.missionutils.Randoms
-import menu.model.menus.*
 
 
 class RecommendSystem(
-    private val coachAndMenus: List<Pair<Coach, List<Menus>>>,
-    private val recommendCategories: List<Int>
+    private val coachAndMenus: List<Pair<Coach, List<String>>>, private val recommendCategories: List<Int>
 ) {
 
     fun getRecommendResult(): List<RecommendResult> {
@@ -14,33 +12,32 @@ class RecommendSystem(
             val coach = pair.first
             val impossibleMenus = pair.second
             val selectedMenus = calculateRecommendMenus(impossibleMenus)
-            RecommendResult(coach.name, selectedMenus.map { it.koreanName })
+            RecommendResult(coach.name, selectedMenus)
         }
     }
 
-    private fun calculateRecommendMenus(impossibleMenus: List<Menus>): List<Menus> {
-        val selectedMenus = mutableListOf<Menus>()
+    private fun calculateRecommendMenus(impossibleMenus: List<String>): List<String> {
+        val selectedMenus = mutableListOf<String>()
         recommendCategories.forEach { category ->
             when (category) {
                 1 -> selectedMenus.add(
-                    Randoms.shuffle(
-                        JapaneseMenus.values().filter { !impossibleMenus.contains(it) })[0]
+                    Randoms.shuffle(Menus.JapaneseMenus.menus.filter { !impossibleMenus.contains(it) })[0]
                 )
 
                 2 -> selectedMenus.add(
-                    Randoms.shuffle(
-                        KoreanMenus.values().filter { !impossibleMenus.contains(it) })[0]
+                    Randoms.shuffle(Menus.KoreanMenus.menus.filter { !impossibleMenus.contains(it) })[0]
                 )
 
                 3 -> selectedMenus.add(
-                    Randoms.shuffle(
-                        ChineseMenus.values().filter { !impossibleMenus.contains(it) })[0]
+                    Randoms.shuffle(Menus.ChineseMenus.menus.filter { !impossibleMenus.contains(it) })[0]
                 )
 
-                4 -> selectedMenus.add(Randoms.shuffle(AsianMenus.values().filter { !impossibleMenus.contains(it) })[0])
+                4 -> selectedMenus.add(
+                    Randoms.shuffle(Menus.AsianMenus.menus.filter { !impossibleMenus.contains(it) })[0]
+                )
+
                 5 -> selectedMenus.add(
-                    Randoms.shuffle(
-                        WesternMenus.values().filter { !impossibleMenus.contains(it) })[0]
+                    Randoms.shuffle(Menus.WesternMenus.menus.filter { !impossibleMenus.contains(it) })[0]
                 )
             }
         }

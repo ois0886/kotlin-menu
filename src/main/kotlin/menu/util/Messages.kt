@@ -11,8 +11,9 @@ object Messages {
 
     const val PRINT_COMPLETE_RECOMMEND = "추천을 완료했습니다."
 
+    const val ERROR_COACH_NUMBER_SHOULD_BE_AT_LEAST_2_MOST_5 ="[ERROR] 코치의 이름은 최소2명, 최대5명까지 입력해야 합니다."
     const val ERROR_COACH_NAME_SHOULD_BE_AT_LEAST_2_CHARACTERS = "[ERROR] 코치의 이름은 2글자 이상이어야 합니다."
-    const val ERROR_COACH_NAME_SHOULD_BE_AT_MOST_5_CHARACTERS = "[ERROR] 코치의 이름은 5글자 이하이어야 합니다."
+    const val ERROR_COACH_NAME_SHOULD_BE_AT_MOST_4_CHARACTERS = "[ERROR] 코치의 이름은 4글자 이하이어야 합니다."
     const val ERROR_COACH_NAME_CANNOT_HAVE_WHITESPACE = "[ERROR] 코치의 이름은 공백일 수 없습니다."
     const val ERROR_COACH_NAME_CANNOT_CONTAIN_DIGITS = "[ERROR] 코치의 이름은 숫자를 포함할수 업습니다."
 
