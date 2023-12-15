@@ -2,6 +2,7 @@ package menu
 
 import camp.nextstep.edu.missionutils.Randoms
 import camp.nextstep.edu.missionutils.test.NsTest
+import menu.menu.main
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Assertions.assertTimeoutPreemptively
 import org.junit.jupiter.api.DisplayName
