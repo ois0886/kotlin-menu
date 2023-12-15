@@ -4,7 +4,6 @@ import menu.model.Coach
 import menu.model.RecommendCategory
 import menu.model.RecommendResult
 import menu.model.RecommendSystem
-import menu.model.Menus
 import menu.util.Messages
 
 class OutputView(
@@ -40,14 +39,12 @@ class OutputView(
                 4 -> str += "| 아시안"
                 5 -> str += "| 양식"
             }
-
             str += if (index < this.size - 1) {
                 " "
             } else {
                 " ]"
             }
         }
-
         return str
     }
 
